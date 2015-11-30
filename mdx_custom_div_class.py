@@ -8,9 +8,9 @@ with custom class for a given text. Usage:
     >>> import markdown
     >>> md = markdown.Markdown(extensions=['custom_div_class'])
 
-    >>> md.convert('i love !!!alert
+    >>> md.convert(```!!!alert
                     spam
-                    !!!')
+                    !!!```)
     u'<div class="alert">spam</div>'
 
 copyright @2014 Konrad Wasowicz <exaroth@gmail.com> (Modified by Jared Short 2015)
