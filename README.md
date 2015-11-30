@@ -36,9 +36,9 @@ pip install git+git://github.com/trek10inc/mdx_custom_div_class.git
 import markdown
 
 md = markdown.Markdown(extensions=["custom_div_class"])
-md.convert("!!!<class name>
+md.convert('''!!!<class name>
               <text to be wrapped>
-            !!!")
+          !!!''')
 
 ```
 
