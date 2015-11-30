@@ -1,7 +1,9 @@
-## Custom Span Class Markdown Extension
+## Custom Div Class Markdown Extension
 
+FORKED WITH <3 from https://github.com/exaroth/mdx_custom_span_class
 
-This is a simple extension for Python-Markdown library, which allows adding span elements with custom class.
+This is a simple extension for Python-Markdown library, which allows adding div elements with custom class. Great for alert boxes and such.
+
 The syntax is:
 ```
 !!<class name>|<text to be wrapped>!!
@@ -9,19 +11,19 @@ The syntax is:
 For instance:
 
 ```shell
-I love !!text-alert|spam!!
+!!alert-info|This is some things about stuff!!
 ```
 will return
 
 ```html
-<p>I love <span class="text-alert">spam</span></p>
+<div class="alert-info">This is some things about stuff</div>
 ```
 
 
 ### Installation
 
 ```shell
-pip install git+git://github.com/exaroth/mdx_custom_span_class.git
+pip install git+git://github.com/trek10inc/mdx_custom_div_class.git
 ```
 
 ### Usage
@@ -29,8 +31,8 @@ pip install git+git://github.com/exaroth/mdx_custom_span_class.git
 ```python
 import markdown
 
-md = markdown.Markdown(extensions=["custom_span_class"])
-md.convert("I love !!text-danger|spam!!")
+md = markdown.Markdown(extensions=["custom_div_class"])
+md.convert("!!alert-info|This is some things about stuff!!")
 
 ```
 
