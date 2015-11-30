@@ -45,7 +45,7 @@ class CustomDivClassPattern(Pattern):
         new div elem with given class
         """
 
-        cls = matched.group("class")
+        cls = matched.group("class").lower()
         text = matched.group("text")
 
         elem = markdown.util.etree.Element("div")
