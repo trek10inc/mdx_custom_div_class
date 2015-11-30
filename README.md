@@ -6,12 +6,16 @@ This is a simple extension for Python-Markdown library, which allows adding div 
 
 The syntax is:
 ```
-!!<class name>|<text to be wrapped>!!
+!!!<class name>
+<text to be wrapped>
+!!!
 ```
 For instance:
 
 ```shell
-!!alert-info|This is some things about stuff!!
+!!!alert-info
+This is some things about stuff
+!!!
 ```
 will return
 
@@ -32,7 +36,9 @@ pip install git+git://github.com/trek10inc/mdx_custom_div_class.git
 import markdown
 
 md = markdown.Markdown(extensions=["custom_div_class"])
-md.convert("!!alert-info|This is some things about stuff!!")
+md.convert("!!!<class name>
+              <text to be wrapped>
+            !!!")
 
 ```
 
