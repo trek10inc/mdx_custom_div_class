@@ -27,7 +27,7 @@ from markdown.inlinepatterns import Pattern
 import re
 
 
-CUSTOM_CLS_RE = re.compile(r'[!]{3}(?P<class>[A-Za-z\t\-0-9 .]+)(?P<text>.+)[!]{3}', re.DOTALL)
+CUSTOM_CLS_RE = r'[!]{3}(?P<class>[A-Za-z\t\-0-9 .]+)(?P<text>.+)[!]{3}'
 
 
 class CustomDivClassExtension(Extension):
@@ -37,7 +37,6 @@ class CustomDivClassExtension(Extension):
         md.inlinePatterns["custom_div_class"] = CustomDivClassPattern(CUSTOM_CLS_RE, md)
 
 class CustomDivClassPattern(Pattern):
-
     def handleMatch(self, matched):
 
         """
