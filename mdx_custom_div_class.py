@@ -24,9 +24,10 @@ import markdown
 from markdown import Extension
 from markdown.preprocessors import Preprocessor
 from markdown.inlinepatterns import Pattern
+import re
 
 
-CUSTOM_CLS_RE = r'[!]{3}(?P<class>[A-Za-z\t\-0-9 .]+)(?P<text>.+)[!]{3}'
+CUSTOM_CLS_RE = re.compile(r'[!]{3}(?P<class>[A-Za-z\t\-0-9 .]+)(?P<text>.+)[!]{3}', re.DOTALL)
 
 
 class CustomDivClassExtension(Extension):
